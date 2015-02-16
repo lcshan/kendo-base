@@ -1,0 +1,7 @@
+[
+    {"__type":"ChartSeries:#PiApplication.Chart","Name":"Extremely Important","Value":17},
+    {"__type":"ChartSeries:#PiApplication.Chart","Name":"Little Importance","Value":5},
+    {"__type":"ChartSeries:#PiApplication.Chart","Name":"Some Importance","Value":19},
+    {"__type":"ChartSeries:#PiApplication.Chart","Name":"Very Important","Value":31},
+    {"__type":"ChartSeries:#PiApplication.Chart","Name":"Zero Importance","Value":1}
+]

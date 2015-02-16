@@ -23,17 +23,25 @@
         <div id="chart"></div>
     <script type="text/javascript">
         function createChart(){
+             console.log("parse");
             $("#chart").kendoChart({
                 dataSource:{
                     transport:{
                         read:{
+//                            url:'data.json',
                             url:'http://temperzone.piapplications.com/marketresearch.svc/GetSurveyResult',
                             dataType:'jsonp'
                         }
                     },
                     schema:{
-                        data:"d"
-                    }
+                        parse: function(response) {
+                            console.log("parse");
+                            console.log(JSON.stringify(response, null, 4));
+                            debugger;
+                            return response.d;
+                        }
+                    },
+                    type:"json"
                 },
                 
                 legend:{
@@ -44,8 +52,8 @@
                 },
                 series:[
                     {
-                        field:"value",
-                        categoryField:"name"
+                        field:"Value",
+                        categoryField:"Name"
                     }
                 ]
             });
